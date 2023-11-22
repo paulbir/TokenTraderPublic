@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.2</LangVersion>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flee" Version="1.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Nito.AsyncEx.Coordination" Version="5.0.0" />
+    <PackageReference Include="SimpleInjector" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Connectors\BinanceConnector\BinanceConnector.csproj" />
+    <ProjectReference Include="..\Connectors\BitfinexConnector\BitfinexConnector.csproj" />
+    <ProjectReference Include="..\Connectors\BitMEXConnector\BitMEXConnector.csproj" />
+    <ProjectReference Include="..\Connectors\BitstampConnector\BitstampConnector.csproj" />
+    <ProjectReference Include="..\Connectors\CGCXConnector\CGCXConnector.csproj" />
+    <ProjectReference Include="..\Connectors\CoinFlexConnector\CoinFlexConnector.csproj" />
+    <ProjectReference Include="..\Connectors\CREXConnector\CREXConnector.csproj" />
+    <ProjectReference Include="..\Connectors\DeribitConnector\DeribitConnector.csproj" />
+    <ProjectReference Include="..\Connectors\DummyConnector\DummyConnector.csproj" />
+    <ProjectReference Include="..\Connectors\DutyFlyConnector\DutyFlyConnector.csproj" />
+    <ProjectReference Include="..\Connectors\FineryConnector\FineryConnector.csproj" />
+    <ProjectReference Include="..\Connectors\GlobitexConnector\GlobitexConnector.csproj" />
+    <ProjectReference Include="..\Connectors\HitBTCConnector\HitBTCConnector.csproj" />
+    <ProjectReference Include="..\Connectors\IDaxConnector\IDaxConnector.csproj" />
+    <ProjectReference Include="..\Connectors\KucoinConnector\KucoinConnector.csproj" />
+    <ProjectReference Include="..\Connectors\OceanConnector\OceanConnector.csproj" />
+    <ProjectReference Include="..\Connectors\QryptosConnector\QryptosConnector.csproj" />
+    <ProjectReference Include="..\Connectors\TmexConnector\TmexConnector.csproj" />
+    <ProjectReference Include="..\Connectors\WoortonConnector\WoortonConnector.csproj" />
+    <ProjectReference Include="..\Connectors\WoortonV2Connector\WoortonV2Connector.csproj" />
+    <ProjectReference Include="..\Connectors\XenaConnector\XenaConnector.csproj" />
+    <ProjectReference Include="..\SharedDataStructures\SharedDataStructures.csproj" />
+    <ProjectReference Include="..\SharedTools\SharedTools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
